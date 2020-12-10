@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		5B5DC00825820CBE00AE9D96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC00725820CBE00AE9D96 /* ViewController.swift */; };
 		5B5DC00D25820CC000AE9D96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B5DC00C25820CC000AE9D96 /* Assets.xcassets */; };
 		5B5DC01025820CC000AE9D96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5DC00E25820CC000AE9D96 /* LaunchScreen.storyboard */; };
+		5B5DC020258258E500AE9D96 /* BluetoothAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DC01F258258E500AE9D96 /* BluetoothAnalyzer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		5B5DC00C25820CC000AE9D96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B5DC00F25820CC000AE9D96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B5DC01125820CC000AE9D96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B5DC01F258258E500AE9D96 /* BluetoothAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothAnalyzer.swift; sourceTree = "<group>"; };
 		6481F7993E0846821354BD82 /* Pods_bt_adapter_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bt_adapter_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95D58CBB3FBCA26ACCD5590 /* Pods-bt-adapter-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bt-adapter-test.debug.xcconfig"; path = "Target Support Files/Pods-bt-adapter-test/Pods-bt-adapter-test.debug.xcconfig"; sourceTree = "<group>"; };
 		FAD52B8202C0DBE852799552 /* Pods-bt-adapter-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bt-adapter-test.release.xcconfig"; path = "Target Support Files/Pods-bt-adapter-test/Pods-bt-adapter-test.release.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				5B5DC00C25820CC000AE9D96 /* Assets.xcassets */,
 				5B5DC00E25820CC000AE9D96 /* LaunchScreen.storyboard */,
 				5B5DC01125820CC000AE9D96 /* Info.plist */,
+				5B5DC01F258258E500AE9D96 /* BluetoothAnalyzer.swift */,
 			);
 			path = "bt-adapter-test";
 			sourceTree = "<group>";
@@ -82,7 +85,6 @@
 				B95D58CBB3FBCA26ACCD5590 /* Pods-bt-adapter-test.debug.xcconfig */,
 				FAD52B8202C0DBE852799552 /* Pods-bt-adapter-test.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -200,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B5DC00825820CBE00AE9D96 /* ViewController.swift in Sources */,
+				5B5DC020258258E500AE9D96 /* BluetoothAnalyzer.swift in Sources */,
 				5B5DC00425820CBE00AE9D96 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

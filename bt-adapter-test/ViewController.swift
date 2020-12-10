@@ -20,6 +20,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        initUI()
+        let analyzer = BluetoothAnalyzer()
+        analyzer.onADVCount = { count in
+            self.advLabel.text = String(count)
+        }
+    }
+    
+    private func initUI() {
         view.backgroundColor = .white
         
         view.addSubview(advInfoLabel)
