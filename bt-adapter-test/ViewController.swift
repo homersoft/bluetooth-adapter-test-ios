@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     
     let resetInfoLabel = UILabel()
     let resetsLabel = UILabel()
+    
+    private var silentWindowsHistory = [String]()
+    private var resetHistory = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,8 @@ class ViewController: UIViewController {
         analyzer.onADVCount = { count in
             self.advLabel.text = String(count)
         }
+        analyzer.onSilentWindow = onSilentWindow
+        analyzer.onBluetoothReset = onBluetoothReset
     }
     
     private func initUI() {
@@ -70,5 +75,29 @@ class ViewController: UIViewController {
             make.top.equalTo(resetInfoLabel.snp.bottom).offset(5)
             make.leading.equalToSuperview().offset(20)
         }
+    }
+    
+    private func onSilentWindow() {
+        silentWindowsHistory.insert(currentTime(), at: 0)
+        if (silentWindowsHistory.count > 20) {
+            silentWindowsHistory.removeLast()
+        }
+        silentWindowsLabel.text = silentWindowsHistory.joined(separator: "\n")
+    }
+    
+    private func onBluetoothReset() {
+        resetHistory.insert(currentTime(), at: 0)
+        if (resetHistory.count > 20) {
+            resetHistory.removeLast()
+        }
+        resetsLabel.text = resetHistory.joined(separator: "\n")
+    }
+        
+    private func currentTime() -> String {
+        let currentDateTime = Date()
+        let formatter = DateFormatter()
+        formatter.timeStyle = .medium
+        formatter.dateStyle = .medium
+        return formatter.string(from: currentDateTime)
     }
 }
