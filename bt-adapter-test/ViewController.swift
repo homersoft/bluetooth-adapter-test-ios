@@ -37,12 +37,14 @@ class ViewController: UIViewController {
         
         view.addSubview(advInfoLabel)
         advInfoLabel.text = "ADV count in last 5s:"
+        advInfoLabel.textColor = .black
         advInfoLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(40)
             make.leading.equalToSuperview().offset(20)
         }
         view.addSubview(advLabel)
         advLabel.text = "0"
+        advLabel.textColor = .black
         advLabel.snp.makeConstraints { make in
             make.centerY.equalTo(advInfoLabel.snp.centerY)
             make.leading.equalTo(advInfoLabel.snp.trailing).offset(5)
@@ -50,12 +52,14 @@ class ViewController: UIViewController {
         
         view.addSubview(silentWindowsInfoLabel)
         silentWindowsInfoLabel.text = "Last windows without ADV detected:"
+        silentWindowsInfoLabel.textColor = .black
         silentWindowsInfoLabel.snp.makeConstraints { make in
             make.top.equalTo(advLabel.snp.bottom).offset(20)
             make.leading.equalToSuperview().offset(20)
         }
         view.addSubview(silentWindowsLabel)
         silentWindowsLabel.text = "None"
+        silentWindowsLabel.textColor = .black
         silentWindowsLabel.numberOfLines = 0
         silentWindowsLabel.snp.makeConstraints { make in
             make.top.equalTo(silentWindowsInfoLabel.snp.bottom).offset(5)
@@ -64,12 +68,14 @@ class ViewController: UIViewController {
         
         view.addSubview(resetInfoLabel)
         resetInfoLabel.text = "Last bluetooth adapter resets:"
+        resetInfoLabel.textColor = .black
         resetInfoLabel.snp.makeConstraints { make in
             make.top.equalTo(silentWindowsLabel.snp.bottom).offset(20)
             make.leading.equalToSuperview().offset(20)
         }
         view.addSubview(resetsLabel)
         resetsLabel.text = "None"
+        resetsLabel.textColor = .black
         resetsLabel.numberOfLines = 0
         resetsLabel.snp.makeConstraints { make in
             make.top.equalTo(resetInfoLabel.snp.bottom).offset(5)
