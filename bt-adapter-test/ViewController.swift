@@ -66,11 +66,12 @@ class ViewController: UIViewController {
         }
         
         contentView.addSubview(silentWindowsInfoLabel)
-        silentWindowsInfoLabel.text = "Last windows without ADV detected:"
+        silentWindowsInfoLabel.text = "Last windows without ADV detected (possible adapter crash):"
+        silentWindowsInfoLabel.numberOfLines = 0
         silentWindowsInfoLabel.textColor = .black
         silentWindowsInfoLabel.snp.makeConstraints { make in
             make.top.equalTo(advLabel.snp.bottom).offset(20)
-            make.leading.equalToSuperview().offset(20)
+            make.leading.trailing.equalToSuperview().inset(20)
         }
         contentView.addSubview(silentWindowsLabel)
         silentWindowsLabel.text = "None"
