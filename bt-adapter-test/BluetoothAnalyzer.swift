@@ -17,6 +17,8 @@ class BluetoothAnalyzer: NSObject, CBCentralManagerDelegate {
     private var adVCounter = 0
     private var manager: CBCentralManager?
     
+    private let windowDuration: TimeInterval = 5
+    
     override init() {
         super.init()
         manager = CBCentralManager(delegate: self, queue: nil)
@@ -24,7 +26,7 @@ class BluetoothAnalyzer: NSObject, CBCentralManagerDelegate {
             manager?.scanForPeripherals(withServices: [], options: nil)
         }
         timer?.invalidate()
-        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(onTick), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: windowDuration, target: self, selector: #selector(onTick), userInfo: nil, repeats: true)
     }
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
