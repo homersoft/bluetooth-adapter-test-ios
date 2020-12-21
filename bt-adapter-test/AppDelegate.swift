@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  bt-adapter-test
-//
-//  Created by Tomasz Oraczewski on 10/12/2020.
-//
-
 import UIKit
 
 @UIApplicationMain
